@@ -20,6 +20,10 @@ jobs:
     uses: script@v1
     with:
       script: |-
+        apt install sudo -y
+        apt install curl -y
+        apt install wget -y
+        
         python3 demo.py --relative --adapt_scale \
           --config config/vox-256.yaml \
           --checkpoint /inputs/model/vox.pt \
